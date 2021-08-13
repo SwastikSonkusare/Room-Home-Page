@@ -1,0 +1,22 @@
+nav {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 4rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 2.5rem;
+}
+
+li {
+  color: #fff;
+  font-weight: 600;
+}

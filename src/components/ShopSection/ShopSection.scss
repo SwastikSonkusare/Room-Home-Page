@@ -1,0 +1,60 @@
+.shop-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    grid-gap: 2rem;
+
+    & h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #000;
+    }
+
+    & p {
+      line-height: 1.7;
+      color: hsl(0, 0%, 63%);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+
+    & span {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.8rem;
+      color: hsl(0, 0%, 27%);
+      text-transform: uppercase;
+    }
+  }
+
+  &__angle {
+    width: 100px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+
+    & button {
+      border: none;
+      background-color: transparent;
+
+      & img {
+        width: 12px;
+        height: 18px;
+      }
+    }
+  }
+}

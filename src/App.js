@@ -4,10 +4,10 @@ import About from "./components/About/About";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <About />
-    </div>
+    </>
   );
 };
 

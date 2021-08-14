@@ -2,8 +2,18 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
 
+  @media only screen and (max-width: 50em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__container {
     padding: 2rem;
+
+    @media only screen and (max-width: 50em) {
+      padding: 5rem;
+    }
 
     & div {
       max-width: 42rem;

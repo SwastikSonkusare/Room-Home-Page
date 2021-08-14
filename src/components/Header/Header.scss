@@ -2,4 +2,10 @@ header {
   display: grid;
   grid-template-columns: 3fr 2fr;
   position: relative;
+
+  @media only screen and (max-width: 50em) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

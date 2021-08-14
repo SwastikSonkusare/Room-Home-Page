@@ -14,6 +14,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   grid-gap: 2.5rem;
+
+  @media only screen and (max-width: 31.25em) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 li {

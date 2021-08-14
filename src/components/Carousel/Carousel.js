@@ -1,18 +1,29 @@
 import React from "react";
 
-import Navbar from "../Navbar/Navbar";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-import hero1 from "../../assets/images/desktop-image-hero-1.jpg";
-import hero2 from "../../assets/images/desktop-image-hero-2.jpg";
-import hero3 from "../../assets/images/desktop-image-hero-3.jpg";
+import { images } from "../../assets/data";
+import Navbar from "../Navbar/Navbar";
 
 import "./Carousel.scss";
 
-const Carousel = () => {
+const Carousel = ({ slider }) => {
+  const matches = useMediaQuery("(max-width:600px)");
+
   return (
     <div className="carousel__container">
       <Navbar />
-      <img src={hero1} alt="hero" className="carousel__image"></img>
+
+      {images.map((img) => (
+        <img
+          src={matches ? img.alt : img.src}
+          alt="hero"
+          className={
+            slider === img.id ? "carousel__image active" : "carousel__image"
+          }
+          key={img.id}
+        ></img>
+      ))}
     </div>
   );
 };

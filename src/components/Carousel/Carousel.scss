@@ -1,7 +1,11 @@
 .carousel {
   &__image {
-    display: block;
+    display: none;
     width: 100%;
     height: 440px;
+
+    &.active {
+      display: block;
+    }
   }
 }

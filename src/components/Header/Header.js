@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Carousel from "../Carousel/Carousel";
 import ShopSection from "../ShopSection/ShopSection";
@@ -6,10 +6,12 @@ import ShopSection from "../ShopSection/ShopSection";
 import "./Header.scss";
 
 const Header = () => {
+  const [slider, setSlider] = useState(1);
+
   return (
     <header>
-      <Carousel />
-      <ShopSection />
+      <Carousel slider={slider} />
+      <ShopSection slider={slider} setSlider={setSlider} />
     </header>
   );
 };
